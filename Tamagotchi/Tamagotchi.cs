@@ -18,13 +18,18 @@ public class Tamagotchi
     }
     public void Feed()
     {
+        Console.WriteLine("Im now less hungry");
         hunger--;
+
     }
 
     public void Hi()
     {
         Random generator = new Random();
-        
+
+        int r = generator.Next(words.Count);
+        Console.WriteLine(words[r]);
+
         ReduceBoredom();
     }
     public void Teach(string word)
@@ -54,7 +59,7 @@ public class Tamagotchi
     }
     private void ReduceBoredom()
     {
-    
+
         boredom--;
     }
 }
